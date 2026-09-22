@@ -1,0 +1,541 @@
+/* ============================================================================
+   TRUST CARE — Design System Extensions & Component Styles
+   "Right Hospital. Confirmed Resources. Ready Before Arrival."
+   ============================================================================ */
+
+/* Top Navigation Command Bar */
+.tc-navbar {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  color: #F8FAFC;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #334155;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.tc-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.tc-brand-logo {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
+.tc-brand-title {
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  line-height: 1.1;
+}
+
+.tc-brand-tagline {
+  font-size: 0.72rem;
+  color: #94A3B8;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.tc-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tc-nav-link {
+  color: #CBD5E1;
+  text-decoration: none;
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.tc-nav-link:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tc-nav-link.active {
+  color: #FFFFFF;
+  background: #2563EB;
+  border-color: #3B82F6;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+}
+
+.tc-live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(16, 185, 129, 0.15);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.tc-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  animation: tc-pulse 1.8s infinite;
+}
+
+@keyframes tc-pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Master Scenario & Simulation Toolbar */
+.tc-simulation-bar {
+  background: #1E293B;
+  border-bottom: 1px solid #334155;
+  padding: 0.65rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tc-sim-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #F59E0B;
+}
+
+.tc-sim-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tc-sim-btn {
+  background: #334155;
+  color: #F8FAFC;
+  border: 1px solid #475569;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.15s ease;
+}
+
+.tc-sim-btn:hover {
+  background: #475569;
+  color: #FFFFFF;
+}
+
+.tc-sim-btn.primary {
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+  border-color: #3B82F6;
+  color: white;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+.tc-sim-btn.primary:hover {
+  background: #1D4ED8;
+}
+
+.tc-sim-btn.danger {
+  background: rgba(220, 38, 38, 0.2);
+  color: #FCA5A5;
+  border-color: rgba(220, 38, 38, 0.4);
+}
+
+.tc-sim-btn.danger:hover {
+  background: #DC2626;
+  color: white;
+}
+
+.tc-sim-btn.warning {
+  background: rgba(217, 119, 6, 0.2);
+  color: #FDE68A;
+  border-color: rgba(217, 119, 6, 0.4);
+}
+
+.tc-sim-btn.warning:hover {
+  background: #D97706;
+  color: white;
+}
+
+/* Page Layout Wrappers */
+.tc-page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.tc-page-header {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tc-page-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 0.25rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.tc-page-subtitle {
+  color: #64748B;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Operational Case Card Banner */
+.tc-case-banner {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-left: 5px solid #2563EB;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tc-case-banner.held {
+  border-left-color: #059669;
+  background: #F0FDF4;
+}
+
+.tc-case-banner.conflict {
+  border-left-color: #DC2626;
+  background: #FEF2F2;
+}
+
+.tc-case-id-badge {
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  background: #1E293B;
+  color: #FFFFFF;
+  letter-spacing: 0.03em;
+}
+
+/* Explainable Hospital Matching Matrix */
+.tc-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.tc-hospital-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  border: 2px solid #E2E8F0;
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.tc-hospital-card.suitable {
+  border-color: #10B981;
+  background: linear-gradient(to bottom, #FFFFFF 0%, #F0FDF4 100%);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.12);
+}
+
+.tc-hospital-card.unsuitable {
+  border-color: #F87171;
+  background: #FFF5F5;
+  opacity: 0.92;
+}
+
+.tc-hospital-card.reconfirm {
+  border-color: #FBBF24;
+  background: #FFFBEB;
+}
+
+.tc-card-status-strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.tc-card-status-strip.suitable { background: #10B981; }
+.tc-card-status-strip.unsuitable { background: #EF4444; }
+.tc-card-status-strip.reconfirm { background: #F59E0B; }
+
+.tc-hosp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+}
+
+.tc-hosp-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0 0 0.2rem 0;
+}
+
+.tc-hosp-meta {
+  font-size: 0.8rem;
+  color: #64748B;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.tc-verdict-pill {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.tc-verdict-pill.suitable {
+  background: #DCFCE7;
+  color: #15803D;
+  border: 1px solid #86EFAC;
+}
+
+.tc-verdict-pill.unsuitable {
+  background: #FEE2E2;
+  color: #B91C1C;
+  border: 1px solid #FCA5A5;
+}
+
+.tc-verdict-pill.reconfirm {
+  background: #FEF3C7;
+  color: #B45309;
+  border: 1px solid #FDE68A;
+}
+
+/* Matrix Evaluation Dimensions */
+.tc-metric-table {
+  width: 100%;
+  font-size: 0.82rem;
+  border-collapse: collapse;
+  margin: 0.85rem 0;
+}
+
+.tc-metric-table tr {
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.tc-metric-table td {
+  padding: 0.4rem 0.2rem;
+}
+
+.tc-metric-label {
+  color: #64748B;
+  font-weight: 500;
+}
+
+.tc-metric-val {
+  text-align: right;
+  font-weight: 700;
+}
+
+.tc-explanation-box {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #334155;
+  margin-bottom: 1rem;
+}
+
+/* Concurrency & Resource Hold Card */
+.tc-hold-status-card {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tc-countdown-display {
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: monospace;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tc-countdown-display.warning {
+  color: #D97706;
+}
+
+.tc-countdown-display.critical {
+  color: #DC2626;
+  animation: tc-pulse-red 1s infinite;
+}
+
+@keyframes tc-pulse-red {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Pre-Arrival Checklist */
+.tc-checklist-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  margin-bottom: 0.65rem;
+}
+
+.tc-checklist-item.ready {
+  background: #F0FDF4;
+  border-color: #86EFAC;
+}
+
+.tc-checklist-item.pending {
+  background: #FFFBEB;
+  border-color: #FDE68A;
+}
+
+/* SBAR Bedside Handover Card */
+.tc-sbar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.tc-sbar-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.85rem;
+}
+
+.tc-sbar-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #2563EB;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+}
+
+/* Audit Timeline Feed */
+.tc-timeline-list {
+  position: relative;
+  padding-left: 2rem;
+  margin: 1.5rem 0;
+}
+
+.tc-timeline-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.75rem;
+  width: 2px;
+  background: #E2E8F0;
+}
+
+.tc-timeline-entry {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.tc-timeline-bullet {
+  position: absolute;
+  left: -2rem;
+  top: 0.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #2563EB;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  box-shadow: 0 0 0 4px #FFFFFF;
+}
+
+.tc-timeline-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.tc-timeline-time {
+  font-size: 0.72rem;
+  color: #64748B;
+  font-family: monospace;
+}
+
+.tc-timeline-role-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
